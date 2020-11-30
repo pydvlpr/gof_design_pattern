@@ -3,7 +3,7 @@ package strategy;
 public class DuckSim{
  
        public static void main (String[] args){
-             // Ausgabe Hello World!
+
              System.out.println("Duck Simulation");
              
              Duck rubber = new RubberDuck();
