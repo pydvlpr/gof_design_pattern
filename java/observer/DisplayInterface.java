@@ -1,3 +1,5 @@
-public class DisplayInterface {
+package observer;
+
+public interface DisplayInterface {
     public void display();
 }

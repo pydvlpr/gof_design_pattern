@@ -2,38 +2,41 @@ package observer;
 
 import java.util.ArrayList;
 
-public class WeatherData() implements SubjectInterface{
+public class WeatherData implements SubjectInterface{
 
     private ArrayList observers;
     private float temperature;
     private float humidity;
-    private fload airpressure;
+    private float airpressure;
     
-
-    public void getTemerature(){
-        return this.temperature
+    public WeatherData() {
+    	this.observers = new ArrayList();
     }
 
-    public void getHumidity(){
-        return this.humidity
+    public float getTemerature(){
+        return this.temperature;
     }
 
-    public void getAirpressure(){
-        return this.airpressure
+    public float getHumidity(){
+        return this.humidity;
     }
 
-    public void registerObserver(observer o){
+    public float getAirpressure(){
+        return this.airpressure;
+    }
+
+    public void registerObserver(ObserverInterface o){
         observers.add(o);
     }
 
-    public void removeObserver(observer o){
-        int i = observers.indexOf(o)
-        observers.remove(i)
+    public void removeObserver(ObserverInterface o){
+        int i = observers.indexOf(o);
+        observers.remove(i);
     }
 
     public void notifyObservers(){
-        //for (int i = 0; i < observers.size(); i++){
-        for(Observer o: observers){
+        for (int i = 0; i < observers.size(); i++){
+            ObserverInterface o = (ObserverInterface)observers.get(i);
             o.update(temperature,humidity,airpressure);
         }
     }
@@ -46,6 +49,7 @@ public class WeatherData() implements SubjectInterface{
         this.temperature = temp;
         this.humidity = humidity;
         this.airpressure = airpressure;
+        this.measurementChanged();
     }
 }
 

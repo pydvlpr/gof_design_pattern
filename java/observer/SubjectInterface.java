@@ -1,7 +1,9 @@
 package observer;
 
-public interface SubjectInterface(){
-    public void registerObserver(Observer o);
-    public void removeObserver(Observer o);
-    public void notifyObserver();
+public interface SubjectInterface {
+	public void registerObserver(ObserverInterface b);
+	public void removeObserver(ObserverInterface b);
+	public void notifyObservers();
+	
 }
+
