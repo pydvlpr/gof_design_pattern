@@ -8,7 +8,6 @@
 class IngredientsDecorator : public Drink{
   public:
     virtual std::string getDescription() const = 0;
-    //double prize() const;
 };
 
 #endif
