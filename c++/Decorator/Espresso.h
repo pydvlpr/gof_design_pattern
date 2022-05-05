@@ -7,7 +7,7 @@
 class Espresso : public Drink{
   public:
     Espresso();
-    ~Espresso();
+    ~Espresso() = default;
     double prize() const;
     std::string getDescription() const;
 };
