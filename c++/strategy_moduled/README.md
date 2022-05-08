@@ -24,12 +24,18 @@ g++ -c -fmodules-ts Duck.cpp // depends on both first compiled files
 g++ -c -fmodules-ts strategy.cpp // depends on all module source files
 ```
 2. Compile main source file:
+```
 g++ -c -fmodules-ts main.cpp
+```
 
 3. Link resulting object files
+```
 g++ -o main *.o
+```
 
 4. Run programm
+```
 ./main
+```
 
 
