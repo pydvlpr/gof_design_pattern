@@ -14,9 +14,13 @@ Partitioning of module didn't work in g++ on my system for whatever reasons.
 # Steps to get things work:
 
 1. Compile module source files:
+
 g++ -c -fmodules-ts FlightBehaviour.cpp // independend
+
 g++ -c -fmodules-ts QuackBehaviour.cpp // independend
+
 g++ -c -fmodules-ts Duck.cpp // depends on both first compiled files
+
 g++ -c -fmodules-ts strategy.cpp // depends on all module source files
 
 2. Compile main source file:
