@@ -1,9 +1,10 @@
 #include<iostream>
 #include<memory>
 
-import strategy.ducks;
-import strategy.flightbehavior;
-import strategy.quackbehavior;
+import strategy;
+//import strategy.ducks;
+//import strategy.flightbehavior;
+//import strategy.quackbehavior;
 
 int main(int argc, char* argv[]){
   auto m =std::make_unique<Mullard>();
